@@ -38,7 +38,7 @@ export default function Home() {
       }
     } catch (err: any) {
       console.error(err);
-      setError('Desculpe, ocorreu um erro ao tentar buscar a explicação. Tente novamente.');
+      setError(`Desculpe, ocorreu um erro ao tentar buscar a explicação. Detalhes: ${err.message || 'Erro desconhecido'}`);
     } finally {
       setIsLoading(false);
     }
